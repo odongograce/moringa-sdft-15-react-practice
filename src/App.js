@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import Table from './components/Table';
 
 /**
  * 
@@ -8,8 +9,6 @@ import { useState } from 'react';
  */
 
 function App() {
-
-
 
   const [formData, setFormData] = useState(
     {
@@ -20,11 +19,30 @@ function App() {
 
   const [expenses, setExpenses] = useState([])
 
+
+  // useEffect(()=>{
+  //     fetch("http://localhost:3001/expenses")
+  // .then((response)=> response.json())
+  // .then(data =>  setExpenses(data))
+  // }, [expenses])
+
+ 
+
+  useEffect(function(){
+     fetch("http://localhost:3001/expenses")
+  .then((response)=> response.json())
+  .then(data =>  {
+    setExpenses(data)
+
+    console.log(data)
+  })
+  }, [])
+
+
+
     
   const handleSubmit = (event) => {
     event.preventDefault()
-
-    // setExpenses([...expenses, {...formData}])
 
     setExpenses((prev)=> [...prev, {...formData}])
 
@@ -32,6 +50,8 @@ function App() {
 
     
   }
+
+
 
   const handleOnChange = (event) => {
 
@@ -61,7 +81,9 @@ function App() {
 
       </div>
       <div className='col-8 border p-4'>
-        Table
+
+        <Table expenses={expenses}/>
+       
       </div>
 
     </div>

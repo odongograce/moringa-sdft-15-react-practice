@@ -1,0 +1,16 @@
+{
+    "expenses": [
+        {
+            "id": 1,
+            "expense": "traveling",
+            "Amount": 400000
+
+        },
+        {
+            "id": 2,
+            "expense": "Cooking",
+            "Amount": 20000
+
+        }
+    ]
+}
