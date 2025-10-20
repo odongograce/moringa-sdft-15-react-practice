@@ -1,16 +1,30 @@
 {
-    "expenses": [
-        {
-            "id": 1,
-            "expense": "traveling",
-            "Amount": 400000
-
-        },
-        {
-            "id": 2,
-            "expense": "Cooking",
-            "Amount": 20000
-
-        }
-    ]
+  "expenses": [
+    
+    {
+      "id": "19c6",
+      "expense": "water bill",
+      "amount": 90
+    },
+    {
+      "id": "1961",
+      "expense": "water bill",
+      "amount": "990"
+    },
+    {
+      "id": "0328",
+      "expense": "Travelling",
+      "amount": "12000"
+    },
+    {
+      "id": "887a",
+      "expense": "Cooking",
+      "amount": "2000"
+    }
+  ],
+  "users": [{
+    "id": 1,
+    "email": "grace@gmail.com",
+    "password": "1234"
+  }]
 }
